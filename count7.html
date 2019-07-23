@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter the number: <input id="Text1" type="text" />
+    <input id="Submit1" type="button" value="Submit" onclick="count7()" />
+    <section id="result"></section>
+
+    <script type="text/javascript">
+        function count7()
+        {
+            var n = parseInt(document.getElementById("Text1").value);
+            document.getElementById("result").innerHTML = recursive(n);
+        }
+
+        function recursive(n)
+        {
+            if (n == 0)
+            { return 0;}
+            else if (n%10 == 7)
+            {  
+                return 1 + recursive(Math.floor(n / 10));
+            }
+            else
+            { return recursive(Math.floor(n / 10)); }
+
+        }
+    </script>
+</body>
+</html>

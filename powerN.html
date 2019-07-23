@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter the number: <input id="Text1" type="text" />
+    Enter the power: <input id="Text2" type="text" />
+    
+    <input id="Button1" type="button" value="Submit" onclick="powern()" />
+    <section id="result"></section>
+
+    <script type="text/javascript">
+        function powern()
+        {
+            var x = parseInt(document.getElementById("Text1").value);
+            var n = parseInt(document.getElementById("Text2").value);
+            document.getElementById("result").innerHTML = recursive(x, n);
+        }
+
+        function recursive(x, n)
+        {
+            if (n == 1)
+            { return x; } 
+            else
+            {
+                return x * recursive(x, n-1);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

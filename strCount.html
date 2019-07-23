@@ -1,0 +1,41 @@
+﻿
+<!--Given a string and a non-empty substring sub, compute recursively the number of times that sub appears in the string, without the sub strings overlapping.
+
+strCount("catcowcat", "cat") → 2
+strCount("catcowcat", "cow") → 1
+strCount("catcowcat", "dog") → 0-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter the string1: <input id="Text1" type="text" />
+    Enter the substring: <input id="Text2" type="text" />
+    <input id="Submit1" type="button" value="Submit" onclick="count()" />
+    <section id="result"></section>
+
+    <script type="text/javascript">
+
+        function count()
+        {
+            var str1 = document.getElementById("Text1").value;
+            var substr = document.getElementById("Text2").value;
+            document.getElementById("result").innerHTML = recursive(str1, substr);
+        }
+
+        function recursive(str1, substr) {
+            if (str1.length < substr.length)
+            { return 0; }
+
+            else if (str1.substring(0, substr.length)== substr)
+            {
+                return 1 + recursive(str1.substring(substr.length),substr);
+            }
+            else
+                return recursive(str1.substring(1), substr);
+        }
+    </script>
+</body>
+</html>

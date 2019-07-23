@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input id="text" type="text" />
+    <input id="button" type="button" value="Submit" onclick="lucky13()" />
+    <section id="result"></section>
+    <script type="text/javascript">
+
+        function lucky13()
+        {
+            var n = document.getElementById("text").value;
+            var a = n.split(",");
+            var newa = [];
+            for (var i = 0; i < a.length; i++)
+            {
+                if (a[i] == 1 || a[i] == 3)
+                {
+                    i++;
+                }
+                newa[i] = a[i];
+            }
+           
+            document.getElementById("result").innerHTML = newa;
+        }
+
+    </script>
+</body>
+</html>

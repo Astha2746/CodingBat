@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input id="text" type="text" />
+    <input id="button" type="button" value="Submit" onclick="tenrun()" />
+    <section id="result"></section>
+    <script type="text/javascript">
+
+        function tenrun()
+        {
+            var n = document.getElementById("text").value;
+            var a = n.split(",");
+            
+            for (var i = 0; i < a.length; i++)
+            {
+                if (parseInt(a[i])%10 == 0)
+                {
+                    a[i + 1] = parseInt(a[i]);
+                }
+            }
+
+            document.getElementById("result").innerHTML = a;
+        }
+
+</script>
+
+</body>
+</html>

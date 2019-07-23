@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter the number: <input id="Text1" type="text" />
+    <input id="Submit1" type="button" value="Fibonacci" onclick="fibonacci()" />
+    <section id="result"></section>
+
+    <script type="text/javascript">
+        function fibonacci()
+        {
+            var n = parseInt(document.getElementById("Text1").value);
+            document.getElementById("result").innerHTML = recursive(n);
+        }
+
+        function recursive(n)
+        {
+
+            if (n <2)
+            { return n; }
+            else
+            {
+                return recursive(n - 1) + recursive(n - 2);
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input id="text" type="text" />
+    <input id="button" type="button" value="Submit" onclick="sum13()" />
+    <section id="result"></section>
+    <script type="text/javascript">
+
+        function sum13()
+        {
+            var n = document.getElementById("text").value;
+            var a = n.split(",");
+            var min = parseInt(a[0]), max = parseInt(a[0]);
+            var sum = parseInt(a[0]);
+
+            for (var i = 1; i < a.length; i++)
+            {
+                if (parseInt(a[i])==13) {
+                    i++;
+                }
+                else
+                    sum = sum + parseInt(a[i]);
+            }
+
+            document.getElementById("result").innerHTML = sum;
+        }
+
+    </script>
+</body>
+</html>

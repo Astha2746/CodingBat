@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter the string: <input id="Text1" type="text" />
+    <input id="Submit1" type="button" value="Submit" onclick="countx()" />
+    <section id="result"></section>
+
+    <script type="text/javascript">
+        //count number of x in the string
+        function countx()
+        {
+            var str = document.getElementById("Text1").value;
+            document.getElementById("result").innerHTML = recursive(str);
+        }
+        function recursive(str) {
+            if (str == '')
+            { return 0; }
+            else if (str.charAt(0) == 'x')
+                { return 1 + recursive(str.substring(1)); }
+
+            return recursive(str.substring(1));
+        }
+    </script>
+</body>
+</html>
